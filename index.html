@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KANHA CLOUD OS</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#080f20;color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:22px;background:#111d35;
+ border-bottom:1px solid #263c60;
+}
+.logo{font-size:24px;font-weight:bold;color:#60a5fa}
+main{padding:20px;max-width:600px;margin:auto}
+.card{
+ background:#14213a;border:1px solid #263d60;
+ border-radius:16px;padding:20px;margin-bottom:18px;
+}
+.device{text-align:center;padding:30px 15px}
+.phone{
+ width:110px;height:175px;margin:20px auto;
+ border:5px solid #60a5fa;border-radius:22px;
+ display:grid;place-items:center;font-size:40px;
+}
+.status{color:#fbbf24;font-weight:bold}
+button{
+ width:100%;padding:14px;margin-top:10px;
+ border:0;border-radius:10px;
+ background:#2563eb;color:white;font-size:16px;
+ font-weight:bold;
+}
+.stop{background:#dc3545}
+.details{
+ display:flex;justify-content:space-between;
+ padding:12px 0;border-bottom:1px solid #30415d;
+}
+.muted{color:#aabbd3}
+footer{text-align:center;padding:20px;color:#8294ae}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">☁ KANHA CLOUD OS</div>
+ <p class="muted">Your Android. Anywhere.</p>
+</header>
+<main>
+ <div class="card device">
+  <h2>My Cloud Device</h2>
+  <div class="phone">☁</div>
+  <p class="status" id="status">● Device Offline</p>
+  <button onclick="startDevice()">▶ START DEVICE</button>
+  <button class="stop" onclick="stopDevice()">■ STOP DEVICE</button>
+ </div>
+ <div class="card">
+  <h2>Device Information</h2>
+  <div class="details"><span class="muted">Android</span><span>10</span></div>
+  <div class="details"><span class="muted">RAM planned</span><span>2 GB</span></div>
+  <div class="details"><span class="muted">Storage planned</span><span>16 GB</span></div>
+  <div class="details"><span class="muted">Users</span><span>3</span></div>
+ </div>
+ <div class="card">
+  <h2>About</h2>
+  <p class="muted">KANHA CLOUD OS v0.1</p>
+  <p class="muted">Cloud Android platform prototype.</p>
+ </div>
+ <p class="muted" style="text-align:center;font-size:12px">
+  Demo only. No real cloud device connected yet.
+ </p>
+</main>
+<footer>© 2026 KANHA CLOUD OS</footer>
+<script>
+function startDevice(){
+ document.getElementById("status").innerText="● DEMO STARTED";
+}
+function stopDevice(){
+ document.getElementById("status").innerText="● DEVICE OFFLINE";
+}
+</script>
+</body>
+</html>

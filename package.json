@@ -1,0 +1,12 @@
+{
+  "name": "kanha-droid-backend",
+  "version": "1.0.0",
+  "description": "KANHA DROID backend",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

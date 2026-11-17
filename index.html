@@ -80,6 +80,23 @@ function stopDevice(){
  document.getElementById("status").innerText="● DEVICE OFFLINE";
 }
 </script>
+ <script>
+async function checkKanhaServer() {
+  try {
+    const response = await fetch(
+      "https://kanha-droid-1.onrender.com/status"
+    );
+
+    const data = await response.json();
+
+    console.log("KANHA DROID:", data);
+  } catch (error) {
+    console.log("Server connection failed:", error);
+  }
+}
+
+checkKanhaServer();
+ </script>
 </body>
 </html>
  
